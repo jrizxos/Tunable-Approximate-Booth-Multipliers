@@ -109,29 +109,6 @@ int main() {
         printf("\"32-32-%02d-1\":{\"MRE\":%lf,\"MAE\":%lf,\"MSE\":%lf,\"EP\":%lf},\n", i, resluts[0], resluts[1], resluts[2], resluts[3]);
     }
 
-    /*
-    // 48x48
-    for(int i=48; i>=1; i--){
-        resluts = scan_random_evaluator(48, 48, i, 0);
-        printf("\"48-48-%02d-0\":{\"MRE\":%lf,\"MAE\":%lf,\"MSE\":%lf,\"EP\":%lf},\n", i, resluts[0], resluts[1], resluts[2], resluts[3]);
-    }
-    // 48x48 flip PM
-    for(int i=47; i>=1; i-=2){
-        resluts = scan_random_evaluator(48, 48, i, 1);
-        printf("\"48-48-%02d-1\":{\"MRE\":%lf,\"MAE\":%lf,\"MSE\":%lf,\"EP\":%lf},\n", i, resluts[0], resluts[1], resluts[2], resluts[3]);
-    }
-
-    // 64x64
-    for(int i=64; i>=1; i--){
-        resluts = scan_random_evaluator(64, 64, i, 0);
-        printf("\"64-64-%02d-0\":{\"MRE\":%lf,\"MAE\":%lf,\"MSE\":%lf,\"EP\":%lf},\n", i, resluts[0], resluts[1], resluts[2], resluts[3]);
-    }
-    // 64x64 flip PM
-    for(int i=63; i>=1; i-=2){
-        resluts = scan_random_evaluator(64, 64, i, 1);
-        printf("\"64-64-%02d-1\":{\"MRE\":%lf,\"MAE\":%lf,\"MSE\":%lf,\"EP\":%lf},\n", i, resluts[0], resluts[1], resluts[2], resluts[3]);
-    }*/
-
     auto end = chrono::high_resolution_clock::now();
     chrono::duration<double> elapsed = end - start;
 
