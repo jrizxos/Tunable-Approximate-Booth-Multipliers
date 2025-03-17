@@ -1,0 +1,2 @@
+evaluator: main.cpp twos_complement.cpp twos_complement.hpp booth_multiplier.cpp booth_multiplier.hpp evaluator.cpp evaluator.hpp
+	g++ main.cpp twos_complement.cpp twos_complement.hpp booth_multiplier.cpp booth_multiplier.hpp evaluator.cpp evaluator.hpp -o "main" -O3

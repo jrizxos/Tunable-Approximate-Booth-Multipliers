@@ -1,0 +1,30 @@
+[*]
+[*] GTKWave Analyzer v3.3.116 (w)1999-2023 BSI
+[*] Mon Mar 17 12:27:06 2025
+[*]
+[dumpfile] "/home/irizos/Desktop/Approximate-Booth-Research/RTL/main_architecture/test.vcd"
+[dumpfile_mtime] "Mon Mar 17 12:24:18 2025"
+[dumpfile_size] 76959
+[savefile] "/home/irizos/Desktop/Approximate-Booth-Research/RTL/main_architecture/gtkwave.gtkw"
+[timestart] 0
+[size] 1854 1001
+[pos] 1295 -75
+*-14.700000 27000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 278
+[signals_width] 118
+[sst_expanded] 1
+[sst_vpaned_height] 297
+@28
+axc_booth_tb.CLK
+@420
+axc_booth_tb.C_in[3:0]
+axc_booth_tb.A_in[7:0]
+axc_booth_tb.B_in[7:0]
+@28
+axc_booth_tb.START
+@420
+axc_booth_tb.N_out[15:0]
+@28
+axc_booth_tb.Done_out
+[pattern_trace] 1
+[pattern_trace] 0
