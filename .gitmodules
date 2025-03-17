@@ -1,0 +1,3 @@
+[submodule "RTL/gf180mcu-pdk"]
+	path = RTL/gf180mcu-pdk
+	url = https://github.com/google/gf180mcu-pdk
