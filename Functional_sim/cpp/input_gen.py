@@ -1,26 +1,5 @@
 import numpy as np
 
-def json_dumper(entr_dict, FILE):
-    """ json.dumps, but better. It structures the output so it's human readable. 
-        Why is this not in the library by default?
-
-        Args:
-            entr_dict (dict): data to dump to file
-            File (str): json file name to dump to 
-
-        Returns:
-            TREE_ROOT (Node): the root of the tree data structure
-    """
-    json_object = '{\n'
-    entries = list(entr_dict.keys())
-    for entry in entries:
-        json_object += '\"' + str(entry) + '\":' + str(entr_dict[entry]) + (',\n' if entry!=entries[-1] else '\n')
-    json_object += '}'
-    
-    with open(FILE, 'w') as json_file:
-        json_file.write(json_object)
-        json_file.close()
-
 def inp_gen():
     '''Generates a binary file with input pairs for cppsim/evaluator.cpp
         Creates a file "inp.bin" with the input pairs, every four bytes is a new input
