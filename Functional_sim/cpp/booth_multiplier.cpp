@@ -30,7 +30,7 @@ long long priority_encoder(const BitArray &A, int size, const BitArray &mask) {
     return -1;
 }
 
-long long axc_booth(const BitArray &A, int size_a, const BitArray &B, int size_b, int cycles, int flip_pm) {
+long long axc_booth(const BitArray &A, int size_a, const BitArray &B, int size_b, int cycles) {
     // Does the approximate booth operation with skip skipped bits and the A and B bitarrays as input.
     auto [plus_t_A, minus_t_A] = transition_detect(A, size_a);
     long long int_b = int_BT(B, size_b);
@@ -42,7 +42,7 @@ long long axc_booth(const BitArray &A, int size_a, const BitArray &B, int size_b
     for (int t = 0; t < cycles; ++t) {
         p_flag = false;
 
-        if (!p_done && (t+flip_pm) % 2 == 0) {
+        if (!p_done && t % 2 == 0) {
             shift_amount = priority_encoder(plus_t_A, size_a, priority_mask);
             if (shift_amount >= 0) {
                 sum += int_b << shift_amount;

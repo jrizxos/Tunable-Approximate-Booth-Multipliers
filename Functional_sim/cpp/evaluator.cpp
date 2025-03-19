@@ -11,7 +11,7 @@ string getExecutablePath() {
     return string(buffer);
 }
 
-array<double, 4> scan_sizes_evaluator(int size_a, int size_b, int cycles, int flip_pm) {
+array<double, 4> scan_sizes_evaluator(int size_a, int size_b, int cycles) {
     // Does every possible multiplication for given sizes of A B in given cycles to find MRE.
 
     double MRE = 0, MAE = 0, MSE = 0, ERR_PROB, delta, rel_delta, sqr_delta;
@@ -26,7 +26,7 @@ array<double, 4> scan_sizes_evaluator(int size_a, int size_b, int cycles, int fl
             int_B = int_BT(B, size_b);
 
             exp = int_A * int_B;
-            res = axc_booth(A, size_a, B, size_b, cycles, flip_pm);
+            res = axc_booth(A, size_a, B, size_b, cycles);
 
             if(exp != res) error_count++;
             delta = abs(exp - res);
@@ -41,7 +41,7 @@ array<double, 4> scan_sizes_evaluator(int size_a, int size_b, int cycles, int fl
     return {MRE, MAE, MSE, ERR_PROB};
 }
 
-array<double, 4> scan_random_evaluator(int size_a, int size_b, int cycles, int flip_pm) {
+array<double, 4> scan_random_evaluator(int size_a, int size_b, int cycles) {
     // Does every MUL_NUM random multiplications for given sizes of A B in given cycles to find MRE.
 
     string exe_path = getExecutablePath();                              // This is needed because somehow C++ thinks that when opening a file
@@ -66,7 +66,7 @@ array<double, 4> scan_random_evaluator(int size_a, int size_b, int cycles, int f
         int_B = int_BT(B, size_b);
         
         exp = (long)int_A * (long)int_B;
-        res = axc_booth(A, size_a, B, size_b, cycles, flip_pm);
+        res = axc_booth(A, size_a, B, size_b, cycles);
 
         if(exp != res) error_count++;
         delta = abs(exp - res);
